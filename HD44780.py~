@@ -7,7 +7,7 @@
 #Website       :https://raspberrypi.mongonta.com
 #Update        :2018/9/9
 ############################################################################
-import smbus2 as smbus
+import smbus
 import time
 import configparser
 import os

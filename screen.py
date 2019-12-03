@@ -36,7 +36,12 @@ def timeString(seconds):
 title = Marquee('')
 
 while True:
-    status = requests.get('http://192.168.1.250/api/v1/getState').json()
+    try:
+        status = requests.get('http://localhost:3000/api/v1/getState').json()
+    except:
+        lcd.message("loading", 1)
+        time.sleep(5)
+        continue
     isPlaying = status['status'] == 'play'
     lcd.setbacklight(isPlaying)
     if not isPlaying:

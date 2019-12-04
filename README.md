@@ -5,11 +5,12 @@ Using LCD library from https://github.com/mongonta0716/hd44780
 
 To install add line to /etc/rc.local before `exit 0`
 
-/home/volumio/volumiolcd/venv/bin/python /home/volumio/volumiolcd/screen.py
+`/home/volumio/volumiolcd/venv/bin/python /home/volumio/volumiolcd/screen.py`
 
-Adjust the paths to match your installation.0
+Adjust the paths to match your installation
 
 To use the python virtual environment from the repository make sure that the VIRTUAL_ENV variable in `venv/bin/activate` is matching actual path.
+
 
 ## Disclaimer:
 

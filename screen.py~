@@ -45,10 +45,9 @@ while True:
     isPlaying = status['status'] == 'play'
     lcd.setbacklight(isPlaying)
     if not isPlaying:
-        time.sleep(2)
         continue
     lcd.message(title.display, 1)
-    # print(title.display)
+    print(title.display)
     times = (timeString(int(status['seek'] / 1000)) + ' ' + timeString(status['duration']) + ' ' + status['trackType'])[:16]
     # print(times)
     lcd.message(times, 2)

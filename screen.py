@@ -27,6 +27,8 @@ class Marquee:
         self.display = str((self.text + ' *** ' + self.text)[self.offset:self.offset + self.length])
 
 def timeString(seconds):
+    if seconds is None:
+        return "00:00"
     minutes = int(seconds / 60)
     seconds = seconds - minutes * 60
     minutesStr = ('0' if minutes < 10 else '') + str(minutes)

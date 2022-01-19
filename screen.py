@@ -37,7 +37,7 @@ title = Marquee('')
 
 while True:
     try:
-        status = requests.get('http://localhost:3000/api/v1/getState').json()
+        status = requests.get('http://192.168.1.11:3000/api/v1/getState').json()
     except:
         lcd.message("loading", 1)
         time.sleep(5)
@@ -47,6 +47,7 @@ while True:
     if not isPlaying:
         lcd.message(" " * 16, 1)
         lcd.message(" " * 16, 2)
+        time.sleep(2)
         continue
     lcd.message(title.display, 1)
     # print(title.display)

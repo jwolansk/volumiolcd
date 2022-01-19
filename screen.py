@@ -44,7 +44,7 @@ while True:
         lcd.message("loading", 1)
         time.sleep(5)
         continue
-    isPlaying = status['status'] == 'play' and len(status['bitdepth']) > 0
+    isPlaying = status['status'] == 'play'# and len(status['bitdepth']) > 0
     lcd.setbacklight(isPlaying)
     if not isPlaying:
         lcd.message(" " * 16, 1)

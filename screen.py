@@ -30,7 +30,7 @@ def timeString(seconds):
     if seconds is None:
         return "00:00"
     minutes = int(seconds / 60)
-    seconds = seconds - minutes * 60
+    seconds = int(seconds - minutes * 60)
     minutesStr = ('0' if minutes < 10 else '') + str(minutes)
     secondsStr = ('0' if seconds < 10 else '') + str(seconds)
     return minutesStr + ':' + secondsStr

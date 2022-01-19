@@ -51,8 +51,9 @@ while True:
         continue
     lcd.message(title.display, 1)
     # print(title.display)
-    times = (timeString(int(status['seek'] / 1000)) + ' ' + timeString(status['duration']) + ' ' + status['trackType'])[:16]
-    # print(times)
-    lcd.message(times, 2)
-    title.tick(status['title'] + ' : ' + status['artist'])
+    if status['seek']:
+        times = (timeString(int(status['seek'] / 1000)) + ' ' + timeString(status['duration']) + ' ' + status['trackType'])[:16]
+        # print(times)
+        lcd.message(times, 2)
+        title.tick(status['title'] + ' : ' + status['artist'])
     time.sleep(1)

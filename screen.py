@@ -52,7 +52,7 @@ while True:
     lcd.message(title.display, 1)
     # print(title.display)
 
-    times = (timeString(int((status['seek'] if status['seek'] is not None else : 0) / 1000)) + ' ' + timeString(status['duration']) + ' ' + status['trackType'])[:16]
+    times = (timeString(int((status['seek'] if status['seek'] is not None else 0) / 1000)) + ' ' + timeString(status['duration']) + ' ' + status['trackType'])[:16]
     # print(times)
     lcd.message(times, 2)
     title.tick(status['title'] + ' : ' + status['artist'])
